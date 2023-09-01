@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-image: url(./assets/bg-desktop.png);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.perfil-image {
+    width: 112px;
+}
+
+.tag-name {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+ul{
+    
+}
