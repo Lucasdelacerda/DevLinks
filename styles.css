@@ -1,21 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
+:root {
+    --bg-image: url(./assets/bg-desktop-light.png);
+    --bg-image-mobile: url(./assets/bg-mobile-light.png);
+    --text-color: #000;
+    --stroke-color: rgba(0, 0, 0, 0.50);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --icons-color: #000;
+    --highlight-color: rgba(0, 0, 0, 0.10);
+   
+
+}
+
+.dark {
+    --bg-image: url(./assets/bg-desktop.png);
+    --bg-image-mobile: url(./assets/bg-mobile.png);
+    --text-color: #fff;
+    --stroke-color: rgba(255, 255, 255, 0.50);
+    --surface-color: gba(255, 255, 255, 0.10);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --icons-color: #fff;
+    --highlight-color: rgba(255, 255, 255, 0.20);
+}
+
 * {
     margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
 }
 
 body {
+    background: var(--bg-image) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 56px;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    background-image: url(./assets/bg-desktop.png);
+    width: 588px;
+    gap: 24px;
+    padding: 24px;
 }
 
-header {
+.perfil {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,18 +55,68 @@ header {
     gap: 8px;
 }
 
-.perfil-image {
-    width: 112px;
-}
-
 .tag-name {
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    font-style: normal;
+}
+
+.container-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+}
+
+.links {
+    color: var(--text-color);
+    width: 100%;
+
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border-radius: 8px;
+    border: 1px solid var(--stroke-color);
+    cursor: pointer;
+
+}
+
+.links:hover {
+    border: 1.5px solid var(--text-color);
+    background: var(--surface-color-hover);
+}
+
+.socials {
+    display: flex;
+}
+
+.socials a {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.3s, z-index 0.3s;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+    background: var(--highlight-color);
+    border-radius: 100%;
+}
+.icons{
+    width: 40px; 
+
+}
+.final-message{
+    font-size: 14px;
     font-weight: 400;
     
 }
-ul{
-    
+@media(max-width:550px) {
+    body {
+        background: var(--bg-image-mobile) center/cover no-repeat;
+    }
 }
